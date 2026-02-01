@@ -1,0 +1,495 @@
+<!-- Home Page View -->
+<section class="home-page">
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1 class="hero-title">Karibu Duka Letu</h1>
+            <p class="hero-subtitle">Pata bidhaa bora zaidi kwa bei nafuu kabisa</p>
+            <div class="hero-buttons">
+                <a href="#products" class="btn btn-primary btn-lg">
+                    <i class="fas fa-shopping-bag"></i> Nunua Sasa
+                </a>
+                <a href="#categories" class="btn btn-outline btn-lg">
+                    <i class="fas fa-tags"></i> Angalia Kategoria
+                </a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="assets/images/hero-bg.jpg" alt="Duka Letu" onerror="this.src='https://via.placeholder.com/600x400'">
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="featured-section">
+        <div class="section-header">
+            <h2 class="section-title">Bidhaa Maarufu</h2>
+            <a href="#products" class="btn btn-outline">Angalia Zote</a>
+        </div>
+        
+        <div class="products-grid" id="featuredProducts">
+            <!-- Products will be loaded here by JavaScript -->
+            <div class="loading-products">
+                <i class="fas fa-spinner fa-spin"></i> Inapakia bidhaa...
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories -->
+    <section class="categories-section">
+        <h2 class="section-title">Kategoria Zetu</h2>
+        <div class="categories-grid" id="categoriesGrid">
+            <!-- Categories will be loaded here by JavaScript -->
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="features-section">
+        <div class="feature-card">
+            <div class="feature-icon">
+                <i class="fas fa-shipping-fast"></i>
+            </div>
+            <h3>Usafirishaji Bure</h3>
+            <p>Usafirishaji bure kwa maagizo yote juu ya Tsh 50,000</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">
+                <i class="fas fa-shield-alt"></i>
+            </div>
+            <h3>Udhamini wa Siku 30</h3>
+            <p>Rudisha bidhaa zako ndani ya siku 30 bila swali</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">
+                <i class="fas fa-headset"></i>
+            </div>
+            <h3>Huduma ya Wateja 24/7</h3>
+            <p>Timu yetu iko tayari kukusaidia muda wowote</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">
+                <i class="fas fa-lock"></i>
+            </div>
+            <h3>Malipo Salama</h3>
+            <p>Malipo yako yanahifadhiwa kikamilifu na salama</p>
+        </div>
+    </section>
+
+    <!-- Special Offers -->
+    <section class="offers-section">
+        <div class="offer-banner">
+            <div class="offer-content">
+                <h2>Punguzo la 50%</h2>
+                <p>Kwenye bidhaa zote za mavazi</p>
+                <a href="#products?category=clothing" class="btn btn-primary">Nunua Sasa</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials-section">
+        <h2 class="section-title">Nini Wateja Wetu Wanachosema</h2>
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <div class="testimonial-text">
+                    "Bidhaa bora na huduma nzuri sana. Nimepata kila kitu nilichokitaka!"
+                </div>
+                <div class="testimonial-author">
+                    <img src="assets/images/user1.jpg" alt="Fatuma" onerror="this.src='https://i.pravatar.cc/150?img=1'">
+                    <div>
+                        <h4>Fatuma Juma</h4>
+                        <p>Mteja wa Mwaka</p>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-text">
+                    "Usafirishaji wa haraka na bei nafuu. Nitarudi tena!"
+                </div>
+                <div class="testimonial-author">
+                    <img src="assets/images/user2.jpg" alt="Juma" onerror="this.src='https://i.pravatar.cc/150?img=2'">
+                    <div>
+                        <h4>Juma Hassan</h4>
+                        <p>Mteja Mara kwa Mara</p>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-text">
+                    "Ubora wa bidhaa ni bora kuliko nilivyotarajia. Asante!"
+                </div>
+                <div class="testimonial-author">
+                    <img src="assets/images/user3.jpg" alt="Neema" onerror="this.src='https://i.pravatar.cc/150?img=3'">
+                    <div>
+                        <h4>Neema Peter</h4>
+                        <p>Mteja Mpya</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter-section">
+        <div class="newsletter-content">
+            <h2>Jiunge na Mlisiti Wetu</h2>
+            <p>Pata taarifa za punguzo na ofa maalum moja kwa moja kwenye email yako</p>
+            <form id="newsletterForm" class="newsletter-form">
+                <input type="email" placeholder="Ingiza barua pepe yako" required>
+                <button type="submit" class="btn btn-primary">Jiunge</button>
+            </form>
+        </div>
+    </section>
+</section>
+
+<style>
+    /* Home Page Specific Styles */
+    .home-page {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-xl);
+    }
+
+    /* Hero Section */
+    .hero-section {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: var(--spacing-xl);
+        align-items: center;
+        background: linear-gradient(135deg, var(--primary-light) 0%, white 100%);
+        border-radius: var(--radius-lg);
+        padding: var(--spacing-xl);
+        margin-bottom: var(--spacing-xl);
+    }
+
+    .hero-content {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing);
+    }
+
+    .hero-title {
+        font-size: var(--text-4xl);
+        font-weight: 800;
+        color: var(--primary-color);
+        line-height: 1.2;
+    }
+
+    .hero-subtitle {
+        font-size: var(--text-xl);
+        color: var(--text-light);
+        margin-bottom: var(--spacing);
+    }
+
+    .hero-buttons {
+        display: flex;
+        gap: var(--spacing);
+        flex-wrap: wrap;
+    }
+
+    .hero-image img {
+        width: 100%;
+        border-radius: var(--radius-lg);
+        box-shadow: var(--shadow-lg);
+    }
+
+    /* Section Styles */
+    .section-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: var(--spacing-lg);
+    }
+
+    .section-title {
+        font-size: var(--text-3xl);
+        font-weight: 700;
+        color: var(--text-dark);
+        position: relative;
+        padding-bottom: var(--spacing-sm);
+    }
+
+    .section-title::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 60px;
+        height: 3px;
+        background-color: var(--primary-color);
+        border-radius: var(--radius-full);
+    }
+
+    /* Featured Products */
+    .products-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: var(--spacing-lg);
+    }
+
+    .loading-products {
+        grid-column: 1 / -1;
+        text-align: center;
+        padding: var(--spacing-xl);
+        color: var(--text-light);
+        font-size: var(--text-lg);
+    }
+
+    /* Categories Section */
+    .categories-section {
+        background-color: var(--bg-white);
+        border-radius: var(--radius-lg);
+        padding: var(--spacing-xl);
+        box-shadow: var(--shadow);
+    }
+
+    .categories-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: var(--spacing);
+        margin-top: var(--spacing-lg);
+    }
+
+    .category-card {
+        background-color: var(--bg-light);
+        border-radius: var(--radius);
+        padding: var(--spacing-lg);
+        text-align: center;
+        cursor: pointer;
+        transition: var(--transition);
+        border: 2px solid transparent;
+    }
+
+    .category-card:hover {
+        border-color: var(--primary-color);
+        transform: translateY(-5px);
+        box-shadow: var(--shadow-lg);
+    }
+
+    .category-card i {
+        font-size: 2.5rem;
+        color: var(--primary-color);
+        margin-bottom: var(--spacing);
+    }
+
+    .category-card h3 {
+        font-size: var(--text-lg);
+        color: var(--text-dark);
+        margin: 0;
+    }
+
+    /* Features Section */
+    .features-section {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: var(--spacing-lg);
+        padding: var(--spacing-xl) 0;
+    }
+
+    .feature-card {
+        text-align: center;
+        padding: var(--spacing-lg);
+        background-color: var(--bg-white);
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+        transition: var(--transition);
+    }
+
+    .feature-card:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--shadow-lg);
+    }
+
+    .feature-icon {
+        width: 70px;
+        height: 70px;
+        background-color: var(--primary-light);
+        border-radius: var(--radius-full);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto var(--spacing);
+    }
+
+    .feature-icon i {
+        font-size: 2rem;
+        color: var(--primary-color);
+    }
+
+    .feature-card h3 {
+        font-size: var(--text-lg);
+        margin-bottom: var(--spacing-sm);
+        color: var(--text-dark);
+    }
+
+    .feature-card p {
+        color: var(--text-light);
+        font-size: var(--text-sm);
+    }
+
+    /* Offers Section */
+    .offers-section {
+        margin: var(--spacing-xl) 0;
+    }
+
+    .offer-banner {
+        background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+        border-radius: var(--radius-lg);
+        padding: var(--spacing-xl);
+        color: white;
+        text-align: center;
+    }
+
+    .offer-content h2 {
+        font-size: var(--text-4xl);
+        font-weight: 800;
+        margin-bottom: var(--spacing-sm);
+    }
+
+    .offer-content p {
+        font-size: var(--text-xl);
+        margin-bottom: var(--spacing-lg);
+        opacity: 0.9;
+    }
+
+    /* Testimonials Section */
+    .testimonials-section {
+        background-color: var(--bg-white);
+        border-radius: var(--radius-lg);
+        padding: var(--spacing-xl);
+        margin: var(--spacing-xl) 0;
+    }
+
+    .testimonials-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: var(--spacing-lg);
+        margin-top: var(--spacing-lg);
+    }
+
+    .testimonial-card {
+        background-color: var(--bg-light);
+        border-radius: var(--radius);
+        padding: var(--spacing-lg);
+        box-shadow: var(--shadow);
+    }
+
+    .testimonial-text {
+        font-size: var(--text-lg);
+        font-style: italic;
+        color: var(--text-dark);
+        margin-bottom: var(--spacing);
+        line-height: 1.6;
+    }
+
+    .testimonial-author {
+        display: flex;
+        align-items: center;
+        gap: var(--spacing);
+    }
+
+    .testimonial-author img {
+        width: 50px;
+        height: 50px;
+        border-radius: var(--radius-full);
+        object-fit: cover;
+    }
+
+    .testimonial-author h4 {
+        font-size: var(--text-base);
+        color: var(--text-dark);
+        margin: 0;
+    }
+
+    .testimonial-author p {
+        font-size: var(--text-sm);
+        color: var(--text-light);
+        margin: 0;
+    }
+
+    /* Newsletter Section */
+    .newsletter-section {
+        background-color: var(--bg-dark);
+        border-radius: var(--radius-lg);
+        padding: var(--spacing-xl);
+        color: white;
+        text-align: center;
+    }
+
+    .newsletter-content h2 {
+        font-size: var(--text-3xl);
+        margin-bottom: var(--spacing);
+    }
+
+    .newsletter-content p {
+        font-size: var(--text-lg);
+        margin-bottom: var(--spacing-lg);
+        opacity: 0.8;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .newsletter-form {
+        display: flex;
+        gap: var(--spacing);
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .newsletter-form input {
+        flex: 1;
+        padding: var(--spacing);
+        border: none;
+        border-radius: var(--radius);
+        font-size: var(--text-base);
+    }
+
+    .newsletter-form button {
+        padding: var(--spacing) var(--spacing-lg);
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .hero-section {
+            grid-template-columns: 1fr;
+            text-align: center;
+        }
+        
+        .hero-buttons {
+            justify-content: center;
+        }
+        
+        .section-header {
+            flex-direction: column;
+            gap: var(--spacing);
+            align-items: flex-start;
+        }
+        
+        .newsletter-form {
+            flex-direction: column;
+        }
+        
+        .hero-title {
+            font-size: var(--text-3xl);
+        }
+        
+        .hero-subtitle {
+            font-size: var(--text-lg);
+        }
+    }
+
+    @media (max-width: 480px) {
+        .hero-section {
+            padding: var(--spacing);
+        }
+        
+        .features-section,
+        .testimonials-grid {
+            grid-template-columns: 1fr;
+        }
+        
+        .categories-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+</style>
